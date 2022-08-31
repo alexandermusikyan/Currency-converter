@@ -1,6 +1,6 @@
 # Currency-converter
 
-Service for getting and aggregating data about video cameras from several services
+Currency conversion service
 
 ## Build
 `mvn clean compile`
