@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to currency converter</title>
+</head>
+<body>
+    <form method="POST" th:action="@{/currency-converter/converted-currency}">
+        <label for="currency_from">Исходная валюта</label>
+        <select id="currency_from" th:name="currency_from">
+            <option th:each="currency: ${currencies}" th:value="${currency}" th:text="${currency}">
+            </option>
+        </select>
+
+        <br>
+
+        <label for="currency_to">Результирующая валюта</label>
+        <select id="currency_to" th:name="currency_to">
+            <option th:each="currency: ${currencies}" th:value="${currency}" th:text="${currency}">
+            </option>
+        </select>
+
+        <br>
+
+        <label for="count">Исходная валюта</label>
+        <input th:name="count" type="text" id="count">
+
+        <br>
+
+        <input type="submit" value="НИииииииииНЗЯ"/>
+    </form>
+</body>
+</html>
